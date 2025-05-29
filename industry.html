@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Industry Dashboard</title>
+  <link rel="stylesheet" href="industry.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="module" src="industry.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo">
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="industry.html" class="active">Dashboard</a>
+      <a href="industrymanage.html">Manage Reports</a>
+      
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username"></span>
+      <div class="avatar"></div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="summary-boxes">
+      <div class="summary-box">Total Reports: <span id="total-reports">0</span></div>
+      <div class="summary-box">Pending: <span id="pending-reports">0</span></div>
+      <div class="summary-box">Reviewed: <span id="reviewed-reports">0</span></div>
+    </div>
+
+    <h2>Recent Submissions</h2>
+    <div id="recent-list" class="report-list"></div>
+  </main>
+</body>
+</html>

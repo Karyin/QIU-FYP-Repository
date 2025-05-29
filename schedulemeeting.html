@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule Monitoring Meeting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="supervisor.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="module" src="supervisor.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" class="logo" alt="QIU Logo">
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="supervisor.html">Dashboard</a>
+      <a href="managereport.html">Manage Reports</a>
+      <a href="schedulemeeting.html" class="active">Schedule Meeting</a>
+      <a href="monitoringform.html">Monitoring Form</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username">Loading...</span>
+      <div class="avatar">?</div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+  </header>
+
+  <main style="padding: 30px;">
+    <h2>Schedule Monitoring Meeting</h2>
+    <form id="meeting-form" class="submit-section">
+      <div class="input-group">
+        <label for="student-id">Student Matric ID</label>
+        <input type="text" id="student-id" name="student-id" autocomplete="off" required>
+      </div>
+      <div class="input-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="input-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="input-group">
+        <label for="mode">Meeting Mode (e.g., Online / In-Person)</label>
+        <input type="text" id="mode" name="mode" autocomplete="on" required>
+      </div>
+      <div class="input-group">
+        <label for="topic">Discussion Topic</label>
+        <input type="text" id="topic" name="topic" autocomplete="on" required>
+      </div>
+      <div class="input-group" style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>

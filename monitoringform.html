@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Monitoring Evaluation Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="supervisor.css" />
+  <script type="module" src="supervisor.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="supervisor.html">Dashboard</a>
+      <a href="managereport.html">Manage Reports</a>
+      <a href="history.html">History</a>
+      <a href="schedulemeeting.html">Schedule Meeting</a>
+      <a href="monitoringform.html" class="active">Monitoring Form</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username">-</span>
+      <div class="avatar">S</div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+  </header>
+
+  <main style="padding: 30px;">
+    <h2>Industrial Training / Practicum Monitoring Report</h2>
+    <form id="monitoring-form" class="submit-section" autocomplete="on">
+
+      <h3>Student Details</h3>
+      <div class="input-group">
+        <label for="student-name">Student Name</label>
+        <input type="text" id="student-name" name="student-name" autocomplete="name" required />
+      </div>
+      <div class="input-group">
+        <label for="student-id">Student ID</label>
+        <input type="text" id="student-id" name="student-id" autocomplete="off" required />
+      </div>
+      <div class="input-group">
+        <label for="faculty">Faculty</label>
+        <input type="text" id="faculty" name="faculty" required />
+      </div>
+      <div class="input-group">
+        <label for="programme">Programme</label>
+        <input type="text" id="programme" name="programme" required />
+      </div>
+      <div class="input-group">
+        <label for="batch">Internship / Practicum Batch</label>
+        <input type="text" id="batch" name="batch" required />
+      </div>
+
+      <h3>Student Feedback</h3>
+      <div class="input-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" name="companyName" required />
+      </div>
+      <div class="input-group">
+        <label for="briefed">Has the student been briefed on the company policies?</label>
+        <select id="briefed" name="briefed" required>
+          <option value="">Choose</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="guidance">Is there any adequate guidance provided by the industry supervisor?</label>
+        <textarea id="guidance" name="guidance" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="adapting">How is the student adapting at workplace?</label>
+        <textarea id="adapting" name="adapting" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="tasks">What are the tasks assigned to the student so far?</label>
+        <textarea id="tasks" name="tasks" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="challenges">Any other comments or challenges faced by the student?</label>
+        <textarea id="challenges" name="challenges" rows="3"></textarea>
+      </div>
+
+      <h3>Industry Supervisor Feedback</h3>
+      <div class="input-group">
+        <label for="name">Name of the Respondent / Industry Supervisor</label>
+        <input type="text" id="name" name="name" autocomplete="name" />
+      </div>
+      <div class="input-group">
+        <label for="contact">Contact Number</label>
+        <input type="tel" id="contact" name="contact" autocomplete="tel" />
+      </div>
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email" />
+      </div>
+      <div class="input-group">
+        <label for="assignedTasks">What are the tasks/projects assigned to the student?</label>
+        <textarea id="assignedTasks" name="assignedTasks" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="response">How is the student responding to the tasks assigned?</label>
+        <textarea id="response" name="response" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="attendance">How is the attendance/punctuality of the student?</label>
+        <textarea id="attendance" name="attendance" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="communication">How is the communication between the industry supervisor and the student?</label>
+        <textarea id="communication" name="communication" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="otherComments">Any other comments from the Industry Supervisor?</label>
+        <textarea id="otherComments" name="otherComments" rows="3"></textarea>
+      </div>
+
+      <div class="input-group" style="text-align: center; margin-top: 20px;">
+        <button type="submit" class="submit-btn">Submit Report</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
+

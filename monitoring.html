@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Monitoring Meeting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="student.css" />
+  <script type="module" src="student.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+        <a href="student.html">Home</a>
+      <a href="submitreport.html">Submit Report</a>
+      <a href="status.html">Status</a>
+      <a href="myreports.html">My Reports</a>
+      <a href="monitoring.html">Monitoring</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons" id="chat-icon">chat</span>
+      <span class="username">Loading...</span>
+      <div class="avatar">?</div>
+       <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+
+     <div id="whatsapp-popup" class="whatsapp-popup">
+     <p>Need help? Chat with your Academic Supervisor:</p>
+     <button id="open-whatsapp">📱 WhatsApp Now</button>
+     </div>
+  </header>
+
+  <main style="padding: 30px;">
+    <h2>Your Monitoring Schedule</h2>
+    <div id="monitoring-info" class="report-list">Loading...</div>
+  </main>
+</body>
+</html>

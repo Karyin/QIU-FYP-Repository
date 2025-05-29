@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Internship Report System</title>
+  <link rel="stylesheet" href="splash.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="splash-card">
+    <div class="logo-text">Quest International University</div>
+    <h1 class="typing-text">Internship Report System</h1>
+    <p class="subtitle">Post Internship Placement Ad Hoc Reporting</p>
+    <div class="loader"></div>
+  </div>
+
+  <script src="splash.js"></script>
+  <script>
+    setTimeout(() => {
+      document.querySelector(".splash-card").classList.add("fade-out");
+      setTimeout(() => window.location.href = "home.html", 500);
+    }, 4000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Manage Reports</title>
+  <link rel="stylesheet" href="supervisor.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="module" src="industrymanage.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="industry.html">Dashboard</a>
+      <a href="industrymanage.html" class="active">Manage Reports</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username">-</span>
+      <div class="avatar">I</div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters">
+      <label for="status-filter">Filter by status:</label>
+      <select id="status-filter">
+        <option value="all">All</option>
+        <option value="Pending">Pending</option>
+        <option value="Reviewed">Reviewed</option>
+      </select>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by title or matric number..."
+        aria-label="Search reports"
+      />
+    </section>
+
+    <section id="report-list" class="report-list">
+      <!-- Reports will be dynamically inserted here -->
+    </section>
+  </main>
+</body>
+</html>

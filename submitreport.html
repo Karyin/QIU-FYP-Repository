@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Report</title>
+  <link rel="stylesheet" href="student.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+  <body class="submit-report-page">
+  
+<header class="top-header">
+  <div class="logo-section">
+    <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+    <h1>Internship Placement System</h1>
+  </div>
+  <nav class="navbar">
+    <a href="student.html">Dashboard</a>
+    <a href="submitreport.html" class="active">Submit Report</a>
+    <a href="status.html">Status</a>
+    <a href="myreports.html">My Reports</a>
+    <a href="monitoring.html">Monitoring</a>
+  </nav>
+  <div class="user-section">
+    <span class="material-icons">notifications</span>
+    <span class="material-icons" id="chat-icon">chat</span>
+    <span class="username">Loading...</span>
+      <div class="avatar">?</div>
+    <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+  </div>
+
+    <div id="whatsapp-popup" class="whatsapp-popup">
+    <p>Need help? Chat with your Academic Supervisor:</p>
+    <button id="open-whatsapp">📱 WhatsApp Now</button>
+    </div>
+</header>
+
+  <main>
+    <div class="submission-container">
+      <h2>Submit Internship Report</h2>
+      <form id="fyp_submission_form">
+       
+        <table>
+          <thead>
+            <tr>
+              <th>Issue Date</th>
+              <th>Matric Number</th>
+              <th>Author</th>
+              <th>Title</th>
+              <th>Subject</th>
+              <th>Upload file (PDF only)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="date" id="issue_date" required /></td>
+              <td><input type="text" id="matric_number" placeholder="Matric Number" required /></td>
+              <td><input type="text" id="author" placeholder="Author Name" required /></td>
+              <td><input type="text" id="title" placeholder="Project Title" required /></td>
+              <td><input type="text" id="subject" placeholder="Subject" required /></td>
+              <td><input type="file" id="pdf" accept=".pdf" required /></td>
+            </tr>
+            <tr>
+             <td colspan="6">
+            <label for="summary"><strong>Student Summary:</strong></label><br />
+            <textarea id="summary" name="summary" rows="3" style="width: 100%;" placeholder="Brief summary of your report..."></textarea>
+  </td>
+</tr>
+
+          </tbody>
+        </table>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="message-box"></div>
+
+    <div class="submission-container">
+      <h2>View Submitted Projects</h2>
+      <button id="view_submissions" class="btn-submit">View Submissions</button>
+      <table id="submission_table" style="display: none;">
+        <thead>
+          <tr>
+            <th>Issue Date</th>
+            <th>Matric Number</th>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Subject</th>
+            <th>Files</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Firebase SDK -->
+
+  <script type="module" src="submitreport.js"></script>
+
+</body>
+</html>

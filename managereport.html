@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Reports</title>
+  <link rel="stylesheet" href="supervisor.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script type="module" src="managereport.js" defer></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="supervisor.html">Dashboard</a>
+      <a href="managereport.html" class="active">Manage Reports</a>
+      <a href="schedulemeeting.html">Schedule Meeting</a>
+      <a href="monitoringform.html">Monitoring Form</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username">-</span>
+      <div class="avatar">S</div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="filters">
+      <label for="status-filter">Filter by status:</label>
+      <select id="status-filter">
+        <option value="all">All</option>
+        <option value="Pending">Pending</option>
+        <option value="Reviewed">Reviewed</option>
+      </select>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by title or matric number..."
+        aria-label="Search reports"
+      />
+    </section>
+
+    <section id="report-list" class="report-list">
+      <!-- Reports will be dynamically inserted here -->
+    </section>
+    
+  </main>
+</body>
+</html>

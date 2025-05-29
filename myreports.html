@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Report History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="student.css" />
+  <script type="module" src="myreports.js"></script>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-section">
+      <img src="Logo(new).png" alt="QIU Logo" class="logo" />
+      <h1>Internship Placement System</h1>
+    </div>
+    <nav class="navbar">
+      <a href="student.html">Home</a>
+      <a href="submitreport.html">Submit Report</a>
+      <a href="status.html">Status</a>
+      <a href="myreports.html" class="active">My Reports</a>
+      <a href="monitoring.html">Monitoring</a>
+    </nav>
+    <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons" id="chat-icon">chat</span>
+      <span class="username">Loading...</span>
+      <div class="avatar">?</div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+
+    <div id="whatsapp-popup" class="whatsapp-popup">
+      <p>Need help? Chat with your Academic Supervisor:</p>
+      <button id="open-whatsapp">📱 WhatsApp Now</button>
+    </div>
+  </header>
+
+  <main style="padding: 30px;">
+    <h2>My Report History</h2>
+
+    <!-- Optional: Search box (activated by searchReports()) -->
+    <input type="text" id="searchInput" placeholder="Search by title..." onkeyup="searchReports()" style="margin-bottom: 20px; padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 6px;">
+
+    <div id="report-list" class="report-list">Loading...</div>
+
+  
+  </main>
+</body>
+</html>
