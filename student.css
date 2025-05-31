@@ -262,32 +262,46 @@ main {
 }
 
 /* ==== Feature Boxes ==== */
-.features-grid {
+.features-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 30px;
+  justify-content: center;
+}
+
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.feature-link:hover {
+  transform: translateY(-5px);
 }
 
 .feature-box {
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 16px;
   color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-box:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
 .feature-box h3 {
-  margin: 10px 0 5px;
-  font-size: 18px;
+  font-size: 20px;
+  margin: 12px 0 6px;
 }
 
 .feature-box p {
   font-size: 14px;
+  opacity: 0.95;
   line-height: 1.4;
 }
 
@@ -297,13 +311,20 @@ main {
   margin-bottom: 8px;
 }
 
-/* ==== Feature Box Colors ==== */
-.box1 { background: #60b3f8; }  /* 蓝色 */
-.box2 { background: #7ae17f; }  /* 绿色 */
-.box3 { background: #ef5350; }  /* 红色 */
-.box4 { background: #f1c37e; }  /* 橙色 */
-.box5 { background: #d96eeb; }  /* 紫色 */
-.box6 { background: #49d1e3; }  /* 青色 */
+/* 色彩主题 */
+.box1 { background: #f44336; }     
+.box2 { background: #ff7043; }    
+.box3 { background: #fbc02d; } 
+.box4 { background: #66bb6a; }    
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .features-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 /* ==== Button Group ==== */
 .button-group {

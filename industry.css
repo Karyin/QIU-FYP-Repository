@@ -1,4 +1,4 @@
-/* 全局基础样式 */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* 顶部导航栏 */
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +17,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Logo 与标题 */
 .logo-section {
   display: flex;
   align-items: center;
@@ -37,7 +36,6 @@ body {
   margin: 0;
 }
 
-/* 导航栏链接 */
 .navbar {
   display: flex;
   gap: 20px;
@@ -54,7 +52,7 @@ body {
   color: #ff8855;
 }
 
-/* 用户区域 */
+
 .user-section {
   display: flex;
   align-items: center;
@@ -62,7 +60,7 @@ body {
 }
 
 .material-icons {
-  color: #f5a623; /* 保留原本的橘色图标 */
+  color: #f5a623; 
   font-size: 24px;
   cursor: pointer;
 }
@@ -85,12 +83,11 @@ body {
   font-size: 16px;
 }
 
-/* 主内容区域 */
 main {
-  padding: 30px;
+  padding: 40px 60px;
+
 }
 
-/* 摘要信息盒子 */
 .summary-boxes {
   display: flex;
   gap: 24px;
@@ -107,19 +104,21 @@ main {
   font-weight: 500;
 }
 
-/* 报告列表样式 */
+
 .report-list {
   margin-top: 20px;
 }
 
 .report-card {
-  background: #ffffff;
-  padding: 16px;
+  background: #fff;
+  padding: 20px 24px;
   border-left: 5px solid #ff8855;
   margin-bottom: 20px;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
 }
+
 
 .report-title {
   font-weight: bold;
@@ -185,7 +184,7 @@ button:hover {
   background: #ff7744;
 }
 
-/* 过滤器搜索框 */
+
 .filters {
   margin-bottom: 20px;
 }
@@ -198,7 +197,7 @@ button:hover {
   max-width: 400px;
 }
 
-/* 用户资料卡片 */
+
 .profile-box {
   display: flex;
   align-items: center;

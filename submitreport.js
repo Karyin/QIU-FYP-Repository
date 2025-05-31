@@ -212,10 +212,10 @@ const matric = user.email.split('@')[0].toUpperCase();
 
 
 
-// --- 登出按钮功能 ---
+
 import { signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-// Logout 功能
+
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

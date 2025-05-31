@@ -11,7 +11,7 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-// ✅ Firebase 配置
+
 const firebaseConfig = {
   apiKey: "AIzaSyDVE4Tzo8AgH82VoLBwUEr2mGvsToF2JDs",
   authDomain: "fyp-database-2172a.firebaseapp.com",
@@ -26,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
 
-// ✅ 登录验证 + 显示头像首字母（隐藏 email）
+
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     alert("You are not logged in. Redirecting...");
@@ -42,7 +42,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-// ✅ DOM 元素引用
+
 const recentList = document.getElementById("recent-list");
 const totalEl = document.getElementById("total-reports");
 const pendingEl = document.getElementById("pending-reports");
@@ -50,7 +50,7 @@ const reviewedEl = document.getElementById("reviewed-reports");
 
 let total = 0, pending = 0, reviewed = 0;
 
-// ✅ 读取 submissions
+
 const submissionsRef = dbRef(db, 'submissions');
 
 onValue(submissionsRef, (snapshot) => {
@@ -110,7 +110,7 @@ onValue(submissionsRef, (snapshot) => {
   reviewedEl.textContent = reviewed;
 });
 
-// ✅ 登出功能
+
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

@@ -150,7 +150,7 @@ function deleteReport(matric, key, pdfUrls) {
         return deleteObject(fileRef);
       });
 
-      // ✅ DOM: 删除页面上的卡片
+      
       const card = document.querySelector(`.report-card textarea[data-key="${key}"]`)?.closest('.report-card');
       if (card) card.remove();
 
@@ -161,10 +161,10 @@ function deleteReport(matric, key, pdfUrls) {
 }
 
 
- // --- 登出按钮功能 ---
+ 
 import { signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-// Logout 功能
+// Logout 
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

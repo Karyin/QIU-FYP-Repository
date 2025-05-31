@@ -11,7 +11,7 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-// ✅ Firebase config
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyDVE4Tzo8AgH82VoLBwUEr2mGvsToF2JDs",
   authDomain: "fyp-database-2172a.firebaseapp.com",
@@ -26,12 +26,12 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth();
 
-// ✅ DOM
+// DOM
 const reportList = document.getElementById("report-list");
 const statusFilter = document.getElementById("status-filter");
 const searchInput = document.getElementById("searchInput");
 
-// ✅ Auth listener
+//  Auth listener
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     alert("You are not logged in. Redirecting...");
@@ -43,7 +43,7 @@ onAuthStateChanged(auth, (user) => {
   loadReports();
 });
 
-// ✅ Load Reports
+// Load Reports
 function loadReports() {
   const submissionsRef = dbRef(db, 'submissions');
   onValue(submissionsRef, (snapshot) => {
@@ -97,7 +97,7 @@ function loadReports() {
   });
 }
 
-// ✅ Save Function (只保存 industry 的部分)
+//  Save Function 
 window.save = function (matric, key) {
   const scoreInput = document.getElementById(`score-${matric}-${key}`);
   const feedbackInput = document.getElementById(`feedback-${matric}-${key}`);
@@ -113,7 +113,7 @@ window.save = function (matric, key) {
     .catch((err) => alert("Failed to save: " + err.message));
 };
 
-// ✅ Logout
+//  Logout
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 动态渐变背景 */
+
 .animated-background {
   position: fixed;
   top: 0; left: 0;
@@ -31,7 +31,7 @@ body {
   position: relative;
 }
 
-/* 打字效果 */
+
 .typing-text {
   font-size: 2rem;
   font-weight: 700;

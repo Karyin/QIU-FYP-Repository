@@ -11,7 +11,7 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 
-// ✅ Firebase Config
+//Firebase Config
 const firebaseConfig = {
   apiKey: "AIzaSyDVE4Tzo8AgH82VoLBwUEr2mGvsToF2JDs",
   authDomain: "fyp-database-2172a.firebaseapp.com",
@@ -26,7 +26,7 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
 
-// ✅ 显示用户 Email & 头像（大写）
+
 // --- Auth State Change Listener ---
 onAuthStateChanged(auth, (user) => {
   if (!user) {
@@ -65,7 +65,7 @@ onValue(submissionsRef, (snapshot) => {
 
       total++;
 
-      // ✅ 判断 supervisor 的评分状态（只判断 academic）
+      
       const academic = report.scores?.academic;
       const rawScore = academic?.score;
       const score = typeof rawScore === "string" ? parseInt(rawScore) : rawScore;
@@ -110,7 +110,7 @@ onValue(submissionsRef, (snapshot) => {
   reviewedEl.textContent = reviewed;
 });
 
-// ✅ 登出按钮功能
+
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
   logoutBtn.addEventListener("click", () => {

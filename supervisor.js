@@ -165,18 +165,22 @@ function handleMeetingForm(supervisorName) {
   });
 }
 
+
 // --- Handle Monitoring Evaluation Form Submission ---
 const monitoringForm = document.getElementById("monitoring-form");
+
 if (monitoringForm) {
   monitoringForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+   
     const studentId = document.getElementById("student-id").value.trim();
     if (!studentId) {
       alert("Student ID is required.");
       return;
     }
 
+    
     const data = {
       studentName: document.getElementById("student-name").value.trim(),
       studentId,
@@ -204,16 +208,19 @@ if (monitoringForm) {
     };
 
     try {
-      const formRef = doc(db, "monitoringForms", studentId);
+    
+      const formRef = doc(db, "monitoringForms", studentId); // ← ensure `doc` and `setDoc` are imported
       await setDoc(formRef, data);
+
       alert("Monitoring form submitted successfully.");
       monitoringForm.reset();
     } catch (error) {
       console.error("Error submitting monitoring form:", error);
       alert("Submission failed. Please try again.");
-    }
-  });
+    }
+  });
 }
+
 
 const logoutBtn = document.getElementById("logout-btn");
 if (logoutBtn) {
