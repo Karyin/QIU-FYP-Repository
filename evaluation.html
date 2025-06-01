@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Industry Supervisor Evaluation</title>
+  <link rel="stylesheet" href="industry.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="module" src="evaluation.js" defer></script>
+  <header class="top-header">
+  <div class="logo-section">
+    <img src="Logo(new).png" alt="QIU Logo" class="logo">
+    <h1>Internship Report System</h1>
+  </div>
+  <nav class="navbar">
+    <a href="industry.html">Dashboard</a>
+    <a href="industrymanage.html">Manage Reports</a>
+    <a href="evaluation.html">Industry Supervisor Evaluation</a>
+  </nav>
+  <div class="user-section">
+      <span class="material-icons">notifications</span>
+      <span class="material-icons">chat</span>
+      <span class="username"></span>
+      <div class="avatar"></div>
+      <span class="material-icons logout-icon" id="logout-btn" title="Logout">logout</span>
+    </div>
+</header>
+
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #f4f4f4, #dbeeff);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+td.desc {
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.skill-header {
+  text-align: left;
+  background-color: #e6f0ff;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 8px;
+}
+
+.instructions {
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: #eef2f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0066cc;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Industry Supervisor Evaluation Form</h1>
+
+    <div class="instructions">
+      <p><strong>The final evaluation criteria for the industrial training for your reference.</strong><br>
+      Please note that a link for online submission will be provided towards the end of the industrial training.</p>
+      <p><strong>Industry Supervisor Evaluation</strong><br>
+      Please tick (✓) where applicable. <br>
+      1 = Very Poor (Never demonstrated; didn't meet expectations)<br>
+      2 = Poor (Seldom demonstrated; rarely met expectations)<br>
+      3 = Fair (Sometimes demonstrated; occasionally met expectations)<br>
+      4 = Commendable (Frequently demonstrated; usually met expectations)<br>
+      5 = Excellent (Always demonstrated; consistently exceeded expectations)</p>
+    </div>
+
+    <form id="evalForm">
+      <label><strong>Student Matric ID:</strong> <input type="text" id="matric" required></label>
+
+      <h3>Section I: Knowledge and Skills</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th class="desc">Item</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr><td colspan="7" class="skill-header"><strong>Cognitive Skills</strong> </td></tr>
+          <tr><td>1</td><td class="desc">The intern demonstrated analytical skills and the ability to resolve problems/issues.</td>
+            <td><input type="radio" name="q1" value="1" required></td>
+            <td><input type="radio" name="q1" value="2"></td>
+            <td><input type="radio" name="q1" value="3"></td>
+            <td><input type="radio" name="q1" value="4"></td>
+            <td><input type="radio" name="q1" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Practical Skills</strong></td></tr>
+          <tr><td>2</td><td class="desc">The intern demonstrated proficiency in applying relevant practical skills within the field when performing tasks.</td>
+            <td><input type="radio" name="q2" value="1" required></td>
+            <td><input type="radio" name="q2" value="2"></td>
+            <td><input type="radio" name="q2" value="3"></td>
+            <td><input type="radio" name="q2" value="4"></td>
+            <td><input type="radio" name="q2" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Digital Skills</strong></td></tr>
+          <tr><td>3</td><td class="desc">The intern showcased a strong foundation in IT/digital knowledge techniques and techniques.</td>
+            <td><input type="radio" name="q3" value="1" required></td>
+            <td><input type="radio" name="q3" value="2"></td>
+            <td><input type="radio" name="q3" value="3"></td>
+            <td><input type="radio" name="q3" value="4"></td>
+            <td><input type="radio" name="q3" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Numeracy Skills</strong></td></tr>
+          <tr><td>4</td><td class="desc">The intern displayed proficiency in applying mathematical concepts and analysing and interpreting numerical and graphical data.</td>
+            <td><input type="radio" name="q4" value="1" required></td>
+            <td><input type="radio" name="q4" value="2"></td>
+            <td><input type="radio" name="q4" value="3"></td>
+            <td><input type="radio" name="q4" value="4"></td>
+            <td><input type="radio" name="q4" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Entrepreneurial Skills</strong></td></tr>
+          <tr><td>5</td><td class="desc">The intern demonstrated ability to add value to the company’s existing services/products by suggesting new solutions/improving practices.</td>
+            <td><input type="radio" name="q5" value="1" required></td>
+            <td><input type="radio" name="q5" value="2"></td>
+            <td><input type="radio" name="q5" value="3"></td>
+            <td><input type="radio" name="q5" value="4"></td>
+            <td><input type="radio" name="q5" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Leadership Skills</strong></td></tr>
+          <tr><td>6</td><td class="desc">The intern exhibited leadership skills and accountability.</td>
+            <td><input type="radio" name="q6" value="1" required></td>
+            <td><input type="radio" name="q6" value="2"></td>
+            <td><input type="radio" name="q6" value="3"></td>
+            <td><input type="radio" name="q6" value="4"></td>
+            <td><input type="radio" name="q6" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Interpersonal Skills</strong></td></tr>
+          <tr><td>7</td><td class="desc">The intern worked with different people in diverse learning and working communities as a team player; established good working relationships with colleagues.</td>
+            <td><input type="radio" name="q7" value="1" required></td>
+            <td><input type="radio" name="q7" value="2"></td>
+            <td><input type="radio" name="q7" value="3"></td>
+            <td><input type="radio" name="q7" value="4"></td>
+            <td><input type="radio" name="q7" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Written Communication Skills</strong></td></tr>
+          <tr><td>8</td><td class="desc">The intern effectively conveyed ideas/suggestions/comments in writing using different forms of presentation.</td>
+            <td><input type="radio" name="q8" value="1" required></td>
+            <td><input type="radio" name="q8" value="2"></td>
+            <td><input type="radio" name="q8" value="3"></td>
+            <td><input type="radio" name="q8" value="4"></td>
+            <td><input type="radio" name="q8" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Oral Communication Skills</strong></td></tr>
+          <tr><td>9</td><td class="desc">The intern effectively conveyed ideas/suggestions/comments verbally and participated effectively in meetings/discussions.</td>
+            <td><input type="radio" name="q9" value="1" required></td>
+            <td><input type="radio" name="q9" value="2"></td>
+            <td><input type="radio" name="q9" value="3"></td>
+            <td><input type="radio" name="q9" value="4"></td>
+            <td><input type="radio" name="q9" value="5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Section II: Characteristics</h3>
+      <table>
+        <tbody>
+            <tr><td colspan="7" class="skill-header"><strong>Resilience</strong></td></tr>
+          <tr><td>10</td><td class="desc">The intern withstood or swiftly recovered from challenging situations.</td>
+            <td><input type="radio" name="q10" value="1" required></td>
+            <td><input type="radio" name="q10" value="2"></td>
+            <td><input type="radio" name="q10" value="3"></td>
+            <td><input type="radio" name="q10" value="4"></td>
+            <td><input type="radio" name="q10" value="5"></td>
+          </tr>
+           <tr><td colspan="7" class="skill-header"><strong>Growth Mindset / Lifelong Learning</strong></td></tr>
+          <tr><td>11</td><td class="desc">The intern consistently demonstrated self-improvement efforts and professional development activities.</td>
+            <td><input type="radio" name="q11" value="1" required></td>
+            <td><input type="radio" name="q11" value="2"></td>
+            <td><input type="radio" name="q11" value="3"></td>
+            <td><input type="radio" name="q11" value="4"></td>
+            <td><input type="radio" name="q11" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Competitive Spirit</strong></td></tr>
+          <tr><td>12</td><td class="desc">The intern displayed ambition and a spirited attitude at work.</td>
+            <td><input type="radio" name="q12" value="1" required></td>
+            <td><input type="radio" name="q12" value="2"></td>
+            <td><input type="radio" name="q12" value="3"></td>
+            <td><input type="radio" name="q12" value="4"></td>
+            <td><input type="radio" name="q12" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Proactive</strong></td></tr>
+          <tr><td>13</td><td class="desc">The intern anticipated possible potential issues/problems and took action/managed situations/resolved before they happen.</td>
+            <td><input type="radio" name="q13" value="1" required></td>
+            <td><input type="radio" name="q13" value="2"></td>
+            <td><input type="radio" name="q13" value="3"></td>
+            <td><input type="radio" name="q13" value="4"></td>
+            <td><input type="radio" name="q13" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Ethical and Professional</strong></td></tr>
+          <tr><td>14</td><td class="desc">The intern demonstrated adherence to the rules; acted ethically and professionally.</td>
+            <td><input type="radio" name="q14" value="1" required></td>
+            <td><input type="radio" name="q14" value="2"></td>
+            <td><input type="radio" name="q14" value="3"></td>
+            <td><input type="radio" name="q14" value="4"></td>
+            <td><input type="radio" name="q14" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Socially Responsible</strong></td></tr>
+          <tr><td>15</td><td class="desc">The intern demonstrated enthusiasm when participating in community engagement activities; demonstrated accountability and transparency when performing tasks.</td>
+            <td><input type="radio" name="q15" value="1" required></td>
+            <td><input type="radio" name="q15" value="2"></td>
+            <td><input type="radio" name="q15" value="3"></td>
+            <td><input type="radio" name="q15" value="4"></td>
+            <td><input type="radio" name="q15" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Good Etiquette</strong></td></tr>
+          <tr><td>16</td><td class="desc">The intern exhibited social and work etiquette, e.g. was responsible, punctual, appropriately dressed, well-mannered, flexible.</td>
+            <td><input type="radio" name="q16" value="1" required></td>
+            <td><input type="radio" name="q16" value="2"></td>
+            <td><input type="radio" name="q16" value="3"></td>
+            <td><input type="radio" name="q16" value="4"></td>
+            <td><input type="radio" name="q16" value="5"></td>
+          </tr>
+          <tr><td colspan="7" class="skill-header"><strong>Personal Skills</strong></td></tr>
+          <tr><td>17</td><td class="desc">The intern demonstrated confidence, self-control, social skills, honesty, punctuality, time management, keeping to and maintaining deadlines.</td>
+            <td><input type="radio" name="q17" value="1" required></td>
+            <td><input type="radio" name="q17" value="2"></td>
+            <td><input type="radio" name="q17" value="3"></td>
+            <td><input type="radio" name="q17" value="4"></td>
+            <td><input type="radio" name="q17" value="5"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 20px;"><strong>Total:</strong> <span id="totalDisplay">0/85</span></p>
+      <button type="submit">Submit Evaluation</button>
+      <p id="statusMsg"></p>
+    </form>
+  </div>
+</body>
+</html>
